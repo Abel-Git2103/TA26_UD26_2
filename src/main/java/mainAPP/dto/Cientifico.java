@@ -59,7 +59,7 @@ public class Cientifico {
 		return asignado_A;
 	}
 
-	public void setCaja(List<Asignado_A> asignado_A) {
+	public void setAsignado_A(List<Asignado_A> asignado_A) {
 		this.asignado_A = asignado_A;
 	}
 

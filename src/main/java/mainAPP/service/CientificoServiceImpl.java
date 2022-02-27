@@ -9,11 +9,11 @@ import mainAPP.dao.ICientificoDao;
 import mainAPP.dto.Cientifico;
 
 @Service
-public class CientificoServiceImpl implements ICientificoService{
+public class CientificoServiceImpl implements ICientificoService {
 
 	@Autowired
 	ICientificoDao iCientificoDao;
-	
+
 	@Override
 	public List<Cientifico> listarCientifico() {
 		return iCientificoDao.findAll();
@@ -25,8 +25,8 @@ public class CientificoServiceImpl implements ICientificoService{
 	}
 
 	@Override
-	public Cientifico cientificoXID(String dni) {
-		return iCientificoDao.findById(dni).get();
+	public Cientifico cientificoXID(String id) {
+		return iCientificoDao.findById(id).get();
 	}
 
 	@Override

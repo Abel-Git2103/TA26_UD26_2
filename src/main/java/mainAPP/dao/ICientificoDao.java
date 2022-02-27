@@ -6,5 +6,4 @@ import mainAPP.dto.Cientifico;
 
 public interface ICientificoDao extends JpaRepository<Cientifico, String> {
 
-	
 }

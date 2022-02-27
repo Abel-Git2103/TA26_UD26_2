@@ -2,10 +2,10 @@ package mainAPP.dto;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -20,8 +20,7 @@ public class Proyecto {
 	private String nombre;
 	private int horas;
 
-	@OneToMany
-	@JoinColumn(name = "id")
+	@OneToMany(mappedBy = "proyecto", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Asignado_A> asignado_A;
 
 	// CONSTRUCTORES
